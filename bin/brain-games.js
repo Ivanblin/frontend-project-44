@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import welcomToGame from '../src/cli.js';
+import { welcomeToGame } from '../src/cli.js';
 
-welcomToGame();
+welcomeToGame();
