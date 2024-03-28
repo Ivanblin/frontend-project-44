@@ -29,5 +29,5 @@ const generateRound = () => {
 }
 
 export const runProgressionGame = () => {
-  runEngine('Answer "yes" if the number is even, otherwise answer "no".', generateRound);
+  runEngine('What number is missing in the progression?', generateRound);
 }
