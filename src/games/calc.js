@@ -30,8 +30,6 @@ const generateRound = () => {
   return [question, answer];
 }
 
-const runCalcGame = () => {
+export const runCalcGame = () => {
   runEngine('What is the result of the expression?', generateRound);
 }
-
-export default runCalcGame;
