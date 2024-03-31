@@ -1,5 +1,5 @@
-import runEngine from '../index';
-import getRandomRange from '../getRandomRange';
+import runEngine from '../index.js';
+import getRandomRange from '../getRandomRange.js';
 
 const getGcd = (num1, num2) => {
   if (num1 === 0) {
