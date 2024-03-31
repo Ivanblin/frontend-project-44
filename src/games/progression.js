@@ -1,10 +1,10 @@
-import { runEngine } from '../index.js';
-import { getRandomRange } from '../getRandomRange.js';
+import runEngine from '../index';
+import getRandomRange from '../getRandomRange';
 
 const generateRandomProgression = (start, stepNumber, hiddenIndex) => {
   const progression = [];
 
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 10; i += 1) {
     progression.push(start + i * stepNumber);
   }
 
@@ -12,7 +12,7 @@ const generateRandomProgression = (start, stepNumber, hiddenIndex) => {
   progression[hiddenIndex] = '..';
 
   return [progression.join(' '), number];
-}
+};
 
 const generateRound = () => {
   const start = getRandomRange();
@@ -21,8 +21,8 @@ const generateRound = () => {
   const [question, answer] = generateRandomProgression(start, stepNumber, hidden);
 
   return [question, answer];
-}
+};
 
-export const runProgressionGame = () => {
+export default function runProgressionGame() {
   runEngine('What number is missing in the progression?', generateRound);
 }

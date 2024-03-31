@@ -1,24 +1,24 @@
-import { runEngine } from '../index.js';
-import { getRandomRange } from '../getRandomRange.js';
+import runEngine from '../index';
+import getRandomRange from '../getRandomRange';
 
 const getRandomOperator = () => {
   const operators = ['-', '+', '*'];
 
   return operators[getRandomRange(0, operators.length - 1)];
-}
+};
 
 const calculation = (num1, num2, operator) => {
-  switch(operator) {
+  switch (operator) {
     case '+':
-      return num1 + num2
+      return num1 + num2;
     case '-':
-      return num1 - num2
+      return num1 - num2;
     case '*':
-      return num1 * num2
+      return num1 * num2;
     default:
-      throw new Error(`invalide operator - ${operator}`)
+      throw new Error(`invalide operator - ${operator}`);
   }
-}
+};
 
 const generateRound = () => {
   const num1 = getRandomRange();
@@ -28,8 +28,8 @@ const generateRound = () => {
   const answer = String(calculation(num1, num2, operator));
 
   return [question, answer];
-}
+};
 
-export const runCalcGame = () => {
+export default function runCalcGame() {
   runEngine('What is the result of the expression?', generateRound);
 }

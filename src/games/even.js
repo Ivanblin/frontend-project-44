@@ -1,5 +1,5 @@
-import { runEngine } from '../index.js';
-import { getRandomRange } from '../getRandomRange.js';
+import runEngine from '../index';
+import getRandomRange from '../getRandomRange';
 
 const isEven = (num) => num % 2 === 0;
 
@@ -9,8 +9,8 @@ const generateRound = () => {
   const answer = isEven(question) ? 'yes' : 'no';
 
   return [question, answer];
-}
+};
 
-export const runEvenGame = () => {
+export default function runEvenGame() {
   runEngine('Answer "yes" if the number is even, otherwise answer "no".', generateRound);
 }

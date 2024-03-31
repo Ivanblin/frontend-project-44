@@ -1,6 +1,5 @@
-import { runEngine } from '../index.js';
-import { getRandomRange } from '../getRandomRange.js';
-
+import runEngine from '../index';
+import getRandomRange from '../getRandomRange';
 
 const getGcd = (num1, num2) => {
   if (num1 === 0) {
@@ -17,8 +16,8 @@ const generateRound = () => {
   const answer = String(getGcd(num1, num2));
 
   return [question, answer];
-}
+};
 
-export const runGcdGame = () => {
+export default function runGcdGame() {
   runEngine('Find the greatest common divisor of given numbers.', generateRound);
 }
