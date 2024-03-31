@@ -11,7 +11,7 @@ const generateRandomProgression = (start, stepNumber, hiddenIndex) => {
   const number = progression[hiddenIndex];
   progression[hiddenIndex] = '..';
 
-  return [progression.join(' '), number];
+  return [progression.join(' '), String(number)];
 };
 
 const generateRound = () => {
