@@ -9,7 +9,7 @@ const generateRandomProgression = (start, stepNumber, hiddenIndex) => {
   }
 
   const number = progression[hiddenIndex];
-  progression[hiddenIndex] = '...';
+  progression[hiddenIndex] = '..';
 
   return [progression.join(' '), number];
 }
