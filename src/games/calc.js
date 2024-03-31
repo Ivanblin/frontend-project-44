@@ -2,9 +2,9 @@ import { runEngine } from '../index.js';
 import { getRandomRange } from '../getRandomRange.js';
 
 const getRandomOperator = () => {
-  const operators = ['-', '+', '*']
+  const operators = ['-', '+', '*'];
 
-  return operators[getRandomRange(0, operators.length - 1)]
+  return operators[getRandomRange(0, operators.length - 1)];
 }
 
 const calculation = (num1, num2, operator) => {
@@ -21,11 +21,11 @@ const calculation = (num1, num2, operator) => {
 }
 
 const generateRound = () => {
-  const num1 = getRandomRange()
-  const num2 = getRandomRange()
-  const operator = getRandomOperator()
-  const question = `${num1} ${operator} ${num2}`
-  const answer = String(calculation(num1, num2, operator))
+  const num1 = getRandomRange();
+  const num2 = getRandomRange();
+  const operator = getRandomOperator();
+  const question = `${num1} ${operator} ${num2}`;
+  const answer = String(calculation(num1, num2, operator));
 
   return [question, answer];
 }

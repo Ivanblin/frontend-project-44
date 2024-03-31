@@ -10,13 +10,13 @@ const getGcd = (num1, num2) => {
 };
 
 const generateRound = () => {
-  const num1 = getRandomRange()
-  const num2 = getRandomRange()
+  const num1 = getRandomRange();
+  const num2 = getRandomRange();
 
-  const question = `${num1} ${num2}`
-  const answer = String(getGcd(num1, num2))
+  const question = `${num1} ${num2}`;
+  const answer = String(getGcd(num1, num2));
 
-  return [question, answer]
+  return [question, answer];
 }
 
 export const runGcdGame = () => {

@@ -5,5 +5,5 @@ export const welcomeToGame = () => {
 
   console.log(`Hello, ${name}`);
 
-  return name
+  return name;
 };
