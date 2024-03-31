@@ -18,10 +18,7 @@ const generateRound = () => {
   const start = getRandomRange();
   const stepNumber = getRandomRange(2, 10);
   const hidden = getRandomRange(0, 9);
-  const [one, two] = generateRandomProgression(start, stepNumber, hidden);
-
-  const question = one;
-  const answer = two;
+  const [question, answer] = generateRandomProgression(start, stepNumber, hidden);
 
   return [question, answer];
 }
